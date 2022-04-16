@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập thao tác với mảng</title>
+</head>
+<body>
+<h3>Sample Screen:</h3>
+<input id="textvalue" type="text"></input>
+<input id="btnAdd" type="button" value="Add" onclick="checkAddToArray()">
+<input id="btnDisplay" type="button" value="Display" onclick="checkDisplay()">
+<div id = "result"></div>
+    <script>
+let x = 0;
+let array = [];
+function checkAddToArray() {
+    array[x] = document.getElementById("textvalue").value;
+    alert("Element:"+ array[x]+"Added at index" + x);
+    x++;
+    document.getElementById("textvalue").value="";
+
+}
+function checkDisplay() {
+    let e = "<br>";
+    for(let i=0;i<array.length;i++){
+        e += 'Element:'+i +"="+array[i]+"<br>";
+
+    }
+    document.getElementById("result").innerText=e;
+
+}
+    </script>
+
+
+</body>
+</html>
